@@ -1,0 +1,23 @@
+[
+    {
+        "prompt": "Who is the developer of Ruby?",
+       "options": {"a": "Yukihiro Matsumoto", "b": "Bill Gates", "c": "Brendan Eich", "d": "Satoshi Nakamoto"},
+       "answer": "Yukihiro Matsumoto",
+       "value": "$100"
+    },
+
+    {
+        "prompt": "Which array method will remove nil values in ruby?",
+        "options": {"a": "compact", "b": "flatten", "c": "filter", "d": "map"},
+        "answer": "compact",
+        "value": "$200"
+    },
+
+    {
+        "prompt": "Which of the following is not an object in ruby?",
+        "options": {"a": "method", "b": "string", "c": "array", "d": "hash"},
+        "answer": "methods",
+        "value": "$300"
+    }
+
+]
