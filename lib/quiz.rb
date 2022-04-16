@@ -1,8 +1,10 @@
 require 'json'
+require_relative './main.rb'
 
 class Quiz
 
-    attr_accessor :prompt, :options, :answer, :value 
+    extend GamePlay 
+    attr_accessor :all, :prompt, :options, :answer, :value 
 
     @@all_data = []
 
@@ -27,14 +29,9 @@ class Quiz
         end
     end
 
-
-
 end
 
-
-
-
-
+Quiz.start_quiz
  
 # class Question
 
