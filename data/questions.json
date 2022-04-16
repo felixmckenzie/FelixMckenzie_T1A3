@@ -1,23 +1,57 @@
 [
     {
         "prompt": "Who is the developer of Ruby?",
-       "options": {"a": "Yukihiro Matsumoto", "b": "Bill Gates", "c": "Brendan Eich", "d": "Satoshi Nakamoto"},
-       "answer": "Yukihiro Matsumoto",
+       "options": [ "a) Yukihiro Matsumoto", "b) Bill Gates", "c) Brendan Eich", "d) Satoshi Nakamoto" ],
+       "answer": "a) Yukihiro Matsumoto",
        "value": "$100"
     },
 
     {
-        "prompt": "Which array method will remove nil values in ruby?",
-        "options": {"a": "compact", "b": "flatten", "c": "filter", "d": "map"},
-        "answer": "compact",
+        "prompt": "Which array method will remove nil values in Ruby?",
+        "options": [ "a) compact", "b) flatten", "c) filter",  "d) map" ],
+        "answer": "a) compact",
         "value": "$200"
     },
 
     {
-        "prompt": "Which of the following is not an object in ruby?",
-        "options": {"a": "method", "b": "string", "c": "array", "d": "hash"},
-        "answer": "methods",
+        "prompt": "Which of the following is not an object in Ruby?",
+        "options": [ "a) method", "b) string", "c) array", "d) hash" ],
+        "answer": "a) method",
         "value": "$300"
-    }
+    },
 
+    {
+        "prompt": "How many types of variables are used in Ruby?",
+        "options": [ "a) 6", "b) 2", "c) 4", "d) 8"],
+        "answer": "c) 4",
+        "value": "$500"
+    },
+
+    {
+       "prompt": "Does Ruby support multiple inheritance?",
+       "options": [ "a) true", "b) false"],
+       "answer": "b) false",
+       "value": "$1000" 
+    },
+
+    {
+        "prompt": "What is the value of the variable upcased in the piece of code below \n upcased = ['one', 'two', 'three'].map {|n| puts n.upcase}",
+        "options": [ "a) upcased = ['ONE', 'TWO', 'THREE']", "b) upcased = ['One', 'Two', 'Three']", "c) upcased = [nil, nil, nil]", "d) upcased = ['one', 'two', 'three']"],
+        "answer": "c) upcased = [nil, nil, nil]",
+        "value": "$2000"
+    },
+
+    {
+        "prompt": "Which statement is true for Array#map and Array#each?",
+        "options": ["a) Array#map does not mutate the original array, Array#each does", "b) Array#map and Array#each do not mutate the original array and both return a new array", "c) Array#each iterates over an array and executes the provided block, Array#map returns a new array of values returned by the block ", "d) Neither are array methods"],
+        "answer": "c) Array#each iterates over an array and executes the provided block, Array#map returns a new array of values returned by the block ", 
+        "value": "$4000"
+    },
+
+    {
+       "prompt": "what does a||=b evaluate to, when a = nil and b = 2?",
+       "options": ["a) a = a,  b = a", "b) a = b, b = b", "c) a = a, b = b", "d) TypeError"],
+       "answer": "b) a = b, b = b",
+       "value": "$8000"
+    }
 ]

@@ -31,8 +31,8 @@ class Quiz
 
 end
 
-Quiz.start_quiz
- 
+
+
 # class Question
 
 #     attr_reader :data, :prompts, :options
