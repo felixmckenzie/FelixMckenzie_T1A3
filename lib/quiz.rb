@@ -1,5 +1,6 @@
 require 'json'
 require_relative './main.rb'
+require_relative './player.rb'
 
 class Quiz
 
@@ -26,10 +27,12 @@ class Quiz
             quiz.options = res[:options]
             quiz.answer = res[:answer]
             quiz.value = res[:value]
-        end
-    end
+             end
+     end
 
-end
+ end
+
+Quiz.get_data
 
 
 

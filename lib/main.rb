@@ -11,7 +11,7 @@ module GamePlay
             |question|
                 input = prompt.select(question.prompt, question.options)
                 check_answer(input, question.answer, question.value)
-                announce_winner("Felix", question, Quiz.all)
+                announce_winner(username, question, Quiz.all)
             end
         end
 
@@ -25,13 +25,17 @@ module GamePlay
          end
     end
 
-    def announce_winner(user_name, question, quiz)
+    def announce_winner(username, question, quiz)
         pastel = Pastel.new
         font = TTY::Font.new(:starwars)
         if question == quiz.last
-            puts pastel.bright_green(font.write("Congratulations #{user_name}, You are a Ruby Millionaire"))
+            puts pastel.bright_green(font.write("Congratulations #{username}, You are a Ruby Millionaire"))
         end
     end
+
+    
+
+
 end
 
 

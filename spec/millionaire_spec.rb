@@ -10,6 +10,9 @@ describe Quiz do
         it 'all includes an array of hashes' do
         expect(Quiz.all.empty?).to eq(false)
         end
+        it 'checks that the array contains all the questions' do 
+            expect(Quiz.all.size).to eq(8)
+        end
     end
 
     describe 'question' do
