@@ -1,9 +1,12 @@
-require_relative '../lib/quiz'
+require_relative '../lib/gameplay.rb'
+require_relative '../lib/quiz.rb'
+require_relative '../lib/player.rb'
 
-describe Quiz do 
+
+describe Gameplay do 
     before do 
-        Quiz.new
-        Quiz.get_data
+        new_player = Player.new("name")
+        new_game = Gameplay.new(Quiz.new, new_player)
     end
 
     describe 'all' do

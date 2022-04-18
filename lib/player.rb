@@ -1,12 +1,14 @@
-require 'tty-prompt'
+
 
 
 class Player
-    attr_accessor :username, 
+    attr_accessor :username
 
-    def initialize (username)
+    def initialize(username)
         @username = username
+        
     end
+
 end
 
 
