@@ -1,29 +1,33 @@
 [
     {
         "prompt": "Who is the developer of Ruby?",
-       "options": [ "a) Yukihiro Matsumoto", "b) Bill Gates", "c) Brendan Eich", "d) Satoshi Nakamoto" ],
+       "options": [ "a) Yukihiro Matsumoto", "b) Bill Gates", "c) Brendan Eich", "d) Satoshi Nakamoto", "Life Line" ],
        "answer": "a) Yukihiro Matsumoto",
+       "lifeline": "Life Line",
        "value": "$100"
     },
 
     {
         "prompt": "Which array method will remove nil values in Ruby?",
-        "options": [ "a) compact", "b) flatten", "c) filter",  "d) map" ],
+        "options": [ "a) compact", "b) flatten", "c) filter",  "d) map", "Life Line"],
         "answer": "a) compact",
+        "lifeline": "Life Line",
         "value": "$200"
     },
 
     {
         "prompt": "Which of the following is not an object in Ruby?",
-        "options": [ "a) method", "b) string", "c) array", "d) hash" ],
+        "options": [ "a) method", "b) string", "c) array", "d) hash", "Life Line"],
         "answer": "a) method",
+        "lifeline": "Life Line",
         "value": "$300"
     },
 
     {
         "prompt": "How many types of variables are used in Ruby?",
-        "options": [ "a) 6", "b) 2", "c) 4", "d) 8"],
+        "options": [ "a) 6", "b) 2", "c) 4", "d) 8", "Life Line"],
         "answer": "c) 4",
+        "lifeline": "Life Line",
         "value": "$500"
     },
 
