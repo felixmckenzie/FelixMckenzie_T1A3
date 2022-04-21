@@ -1,11 +1,13 @@
 require 'tty-prompt'
 require 'colorize'
+require 'artii'
 
 class Gameplay
   def initialize(quiz, player)
     @quiz = quiz
     @player = player
     @prompt = TTY::Prompt.new
+    @winner_font = Artii::Base.new
   end
 
   def self.get_data
@@ -57,7 +59,7 @@ class Gameplay
 
   def announce_winner(username, question, quiz)
     if question == quiz.last
-      puts "Congratulations #{username}, You are a Ruby Millionaire"
+      puts @winner_font.asciify("Congratulations #{username}, You are a Ruby Millionaire!").colorize(:light_green)
     end
   end
 end

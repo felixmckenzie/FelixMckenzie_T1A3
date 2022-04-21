@@ -4,7 +4,6 @@ require_relative './quiz.rb'
 require 'tty-prompt'
 require 'tty-table'
 require 'colorize'
-require 'tty-font'
 require 'artii'
 
 class Menu
@@ -12,8 +11,8 @@ class Menu
 
   def self.print_welcome_message
     font = Artii::Base.new
+    puts font.asciify("Welcome to").colorize(:cyan)
     puts font.asciify('Who Wants to Be A Ruby Millionaire!').colorize(:light_green)
-    # write("Who Wants To Be A Ruby Millionaire", letter_spacing: 2).colorize(:light_green)
   end
 
   def self.log_in
