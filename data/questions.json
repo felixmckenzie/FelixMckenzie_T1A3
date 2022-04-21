@@ -1,61 +1,87 @@
 [
     {
-        "prompt": "Who is the developer of Ruby?",
-       "options": [ "a) Yukihiro Matsumoto", "b) Bill Gates", "c) Brendan Eich", "d) Satoshi Nakamoto", "Life Line" ],
-       "answer": "a) Yukihiro Matsumoto",
+        "prompt": "Who Is The Developer Of Ruby?",
+       "options": [ "Yukihiro Matsumoto", "Bill Gates", "Brendan Eich", "Satoshi Nakamoto", "Life Line" ],
+       "answer": "Yukihiro Matsumoto",
        "lifeline": "Life Line",
-       "value": "$100"
+       "value": "$500"
     },
 
     {
-        "prompt": "Which array method will remove nil values in Ruby?",
-        "options": [ "a) compact", "b) flatten", "c) filter",  "d) map", "Life Line"],
-        "answer": "a) compact",
+        "prompt": "Which Array Method Will Remove Nil Values In Ruby?",
+        "options": [ "compact", "flatten", "filter",  "map", "Life Line"],
+        "answer": "compact",
         "lifeline": "Life Line",
-        "value": "$200"
+        "value": "$1,000"
     },
 
     {
-        "prompt": "Which of the following is not an object in Ruby?",
-        "options": [ "a) method", "b) string", "c) array", "d) hash", "Life Line"],
-        "answer": "a) method",
+        "prompt": "Which Of The Following Is Not An Object In Ruby?",
+        "options": [ "method", "string", "array", "hash", "Life Line"],
+        "answer": "method",
         "lifeline": "Life Line",
-        "value": "$300"
+        "value": "$2,000"
     },
 
     {
-        "prompt": "How many types of variables are used in Ruby?",
-        "options": [ "a) 6", "b) 2", "c) 4", "d) 8", "Life Line"],
-        "answer": "c) 4",
+        "prompt": "How Many Types Of Variables Are Used In Ruby?",
+        "options": [ "6", "2", "4", "8", "Life Line"],
+        "answer": "4",
         "lifeline": "Life Line",
-        "value": "$500"
+        "value": "$5,000"
     },
 
     {
-       "prompt": "Does Ruby support multiple inheritance?",
-       "options": [ "a) true", "b) false"],
-       "answer": "b) false",
-       "value": "$1000" 
+       "prompt": "Ruby Is What Type Of Programming Language?",
+       "options": [ "Strongly Typed / Statically Type", "Strongly Typed / Dynamically Typed", "Weakly Typed / Statically Typed", "Weakly Typed / Dynamically Typed", "Life Line"],
+       "answer": "Strongly Typed / Dynamically Typed",
+       "value": "$10,000" 
     },
 
     {
-        "prompt": "What is the value of the variable upcased in the piece of code below \n upcased = ['one', 'two', 'three'].map {|n| puts n.upcase}",
-        "options": [ "a) upcased = ['ONE', 'TWO', 'THREE']", "b) upcased = ['One', 'Two', 'Three']", "c) upcased = [nil, nil, nil]", "d) upcased = ['one', 'two', 'three']"],
-        "answer": "c) upcased = [nil, nil, nil]",
-        "value": "$2000"
+        "prompt": "What Is The Value Of The Variable Upcased In The Piece Of Code Below \n upcased = ['one', 'two', 'three'].map {|n| puts n.upcase}",
+        "options": [ "upcased = ['ONE', 'TWO', 'THREE']", "upcased = ['One', 'Two', 'Three']", "upcased = [nil, nil, nil]", "upcased = ['one', 'two', 'three']", "Life Line"],
+        "answer": "upcased = [nil, nil, nil]",
+        "value": "$20,000"
     },
 
     {
-        "prompt": "Which statement is true for Array#map and Array#each?",
-        "options": ["a) Array#map does not mutate the original array, Array#each does", "b) Array#map and Array#each do not mutate the original array and both return a new array", "c) Array#each iterates over an array and executes the provided block, Array#map returns a new array of values returned by the block ", "d) Neither are array methods"],
-        "answer": "c) Array#each iterates over an array and executes the provided block, Array#map returns a new array of values returned by the block ", 
-        "value": "$4000"
+        "prompt": "Identify The Objects In The Following Line Of Code n/ random_stuff = [:tall, 'dude', 45.23]?",
+        "options": [":tall", "dude", "45.23", "all of the above"],
+        "answer": "all of the above",
+        "value": "$50,000"
     },
 
     {
-       "prompt": "what does a||=b evaluate to, when a = nil and b = 2?",
-       "options": ["a) a = a,  b = a", "b) a = b, b = b", "c) a = a, b = b", "d) TypeError"],
-       "answer": "b) a = b, b = b",
-       "value": "$8000"
+       "prompt": "What Does a||=b Evaluate To, When a = nil and b = 2?",
+       "options": [" a = a,  b = a", " a = b, b = b", " a = a, b = b", "TypeError"],
+       "answer": "a = b, b = b",
+       "lifeline": "Life Line",
+       "value": "$75,000"
+    },
+    {
+        "prompt": "Which of the following is supported by Ruby?",
+        "options": ["Dynamic Type System", "Multiple Programming Paradigms", "Autmatic Memory Management", "All Of The Above", "Life Line"],
+        "answer": "All Of The Above",
+        "lifeline": "Life Line",
+        "value": "$150,000"
+    },
+    {
+        "prompt": "Variables That Start With A Dollar Sign Are What Kind Of Variables In Ruby?",
+        "options": ["Local variable", "Global variable", "Instance variable", "Class variable", "Life Line"],
+        "answer": "Global variable",
+        "lifeline": "Life Line",
+        "value": "$250,000"
+    }
+    {
+        "prompt": "What Does %x!ls! Represent?",
+        "options": ["Same as back tick command output `ls`", "Same as 'x'", "Same as 'xls'", "None of the above", "Life Line"],
+        "answer": "Same as back tick command output `ls`",
+        "lifeline": "Life Line",
+        "value": "$500,000"
+    },
+
+    {
+
     }
 ]

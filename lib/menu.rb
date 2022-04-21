@@ -7,8 +7,6 @@ require 'colorize'
 require 'artii'
 
 class Menu
-
-
   def self.print_welcome_message
     font = Artii::Base.new
     puts font.asciify("Welcome to").colorize(:cyan)
@@ -16,11 +14,11 @@ class Menu
   end
 
   def self.log_in
-   prompt = TTY::Prompt.new
+    prompt = TTY::Prompt.new
     puts "Please enter a user name between 3 and 10 characters long".colorize(:cyan)
     puts "user name can contain upper or lowercase letters, numbers, underscores or dashes".colorize(:cyan)
     username = prompt.ask("What would you like your user name to be?") do |q|
-        q.validate(/^[a-zA-Z0–9_-]{3,10}$/, "Invalid username: %{value}, please enter again".colorize(:red))
+      q.validate(/^[a-zA-Z0–9_-]{3,10}$/, "Invalid username: %{value}, please enter again".colorize(:red))
     end
     system("clear")
     player = Player.new(username)
@@ -51,36 +49,31 @@ class Menu
     puts table.render(:ascii, alignment: [:center])
   end
 
-
-def self.run_menu
+  def self.run_menu
     prompt = TTY::Prompt.new
 
     choices = [
-        {name: "Log in and play", value: 1},
-        {name: "View prize money", value: 2},
-        {name: "How to play", value: 3},
-        {name: "Exit the app", value: 4}
+      { name: "Log in and play", value: 1 },
+      { name: "View prize money", value: 2 },
+      { name: "How to play", value: 3 },
+      { name: "Exit the app", value: 4 }
     ]
 
-    Menu.print_welcome_message 
-   puts input = prompt.select("What would you like to do?", choices, cycle: true)
+    Menu.print_welcome_message
+    puts input = prompt.select("What would you like to do?", choices, cycle: true)
     Menu.user_selection(input)
+  end
 
-end
-
-def self.user_selection(input)
+  def self.user_selection(input)
     case input
     when 1
-        Menu.log_in
+      Menu.log_in
     when 2
-        Menu.prize_money
-    when 3 
-        Menu.rules 
+      Menu.prize_money
+    when 3
+      Menu.rules
     when 4
-        exit
+      exit
     end
+  end
 end
-
-
-end
-

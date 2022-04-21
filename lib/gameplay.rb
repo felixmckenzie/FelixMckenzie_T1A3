@@ -63,4 +63,3 @@ class Gameplay
     end
   end
 end
-

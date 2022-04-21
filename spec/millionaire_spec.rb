@@ -63,7 +63,7 @@ describe Gameplay do
     expect(quiz[1].options.class).to eq(Array)
   end
 
-  it 'quiz returns an answer for a question' do
+  it 'quiz returns an answer to a question' do
     new_quiz = Quiz.new
     new_player = Player.new("Felix")
     game = Gameplay.new(new_quiz, new_player)
