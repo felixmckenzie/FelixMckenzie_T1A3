@@ -49,7 +49,7 @@ class Menu
     puts table.render(:ascii, alignment: [:center])
   end
 
-  def self.run_menu
+  def self.display_menu
     prompt = TTY::Prompt.new
 
     choices = [

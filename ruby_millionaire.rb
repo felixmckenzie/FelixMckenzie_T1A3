@@ -1,4 +1,4 @@
-require_relative './menu.rb'
+require_relative "./menu.rb"
 require 'optparse'
 
 class ArgParser
@@ -11,7 +11,7 @@ class ArgParser
         options[:help] = help
       end
 
-      opts.on('-q', '--quick', 'takes user to log in and play') do |quick|
+      opts.on('-q', '--quick', 'Takes user to log in and play') do |quick|
         options[:quick] = quick
       end
     end
@@ -36,5 +36,5 @@ if options[:help]
 elsif options[:quick]
   Menu.log_in
 else
-  Menu.run_menu
+  Menu.display_menu
 end

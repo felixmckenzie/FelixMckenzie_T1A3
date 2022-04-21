@@ -46,15 +46,15 @@
     },
 
     {
-        "prompt": "Identify The Objects In The Following Line Of Code n/ random_stuff = [:tall, 'dude', 45.23]?",
-        "options": [":tall", "dude", "45.23", "all of the above"],
+        "prompt": "Identify The Objects In The Following Line Of Code random_stuff = [:tall, 'dude', 45.23]?",
+        "options": [":tall", "dude", "45.23", "all of the above", "Life Line"],
         "answer": "all of the above",
         "value": "$50,000"
     },
 
     {
        "prompt": "What Does a||=b Evaluate To, When a = nil and b = 2?",
-       "options": [" a = a,  b = a", " a = b, b = b", " a = a, b = b", "TypeError"],
+       "options": ["a = a,  b = a", "a = b, b = b", "a = a, b = b", "TypeError"],
        "answer": "a = b, b = b",
        "lifeline": "Life Line",
        "value": "$75,000"
@@ -72,16 +72,13 @@
         "answer": "Global variable",
         "lifeline": "Life Line",
         "value": "$250,000"
-    }
+    },
     {
         "prompt": "What Does %x!ls! Represent?",
         "options": ["Same as back tick command output `ls`", "Same as 'x'", "Same as 'xls'", "None of the above", "Life Line"],
         "answer": "Same as back tick command output `ls`",
         "lifeline": "Life Line",
         "value": "$500,000"
-    },
-
-    {
-
     }
+
 ]
