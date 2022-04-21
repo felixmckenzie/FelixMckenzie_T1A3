@@ -12,7 +12,8 @@ gem 'tty-prompt'
 
 gem 'tty-font'
 
+gem "tty-table"
+
 gem 'pastel'
 
 gem 'colorize', '~> 0.8.1'
-

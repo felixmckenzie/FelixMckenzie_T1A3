@@ -24,15 +24,23 @@ class Gameplay
     prompt = TTY::Prompt.new
     quiz = Gameplay.get_data
     quiz.each do |question|
-      input = prompt.select(question.prompt, question.options)
-      if input == question.lifeline && player.life_lines > 0
-        new_options = question.life_line_options(question.options, question.answer)
-        input = prompt.select(question.prompt, new_options)
-      elsif input == question.lifeline && player.lifelines <= 0
-        puts "Unfortunately #{player.username} you have used all your lifelines, please pick an answer"
-      else
-        check_answer(input, question.answer, question.value)
-        announce_winner(player.username, question, quiz)
+      begin
+        first_input = prompt.select(question.prompt, question.options)
+
+        if first_input == question.lifeline && player.lifelines == 0
+          puts "No life lines left, please try again"
+          redo
+        end
+
+        if first_input == question.lifeline && player.lifelines > 0
+          new_options = question.life_line_options(question.options, question.answer)
+          second_input = prompt.select(question.prompt, new_options)
+          check_answer(second_input, question.answer, question.value)
+          player.lifelines -= 1;
+        else
+          check_answer(first_input, question.answer, question.value)
+          announce_winner(player.username, question, quiz)
+        end
       end
     end
   end
@@ -54,5 +62,4 @@ class Gameplay
     end
   end
 end
-
 

@@ -1,9 +1,9 @@
 class Player
-  attr_accessor :username, :life_lines
+  attr_accessor :username, :lifelines
 
-  def initialize(username, life_lines = 2)
+  def initialize(username)
     @username = username
-    @life_lines = life_lines;
+    @lifelines = lifelines;
     # Bank accountant = [];
   end
 end

@@ -1,7 +1,7 @@
 require 'json'
 
 class Quiz
-  attr_accessor :all_data, :prompt, :options, :answer, :value, :lifeline
+  attr_accessor :prompt, :options, :answer, :value, :lifeline
 
   def initialize()
     @all_data = []
