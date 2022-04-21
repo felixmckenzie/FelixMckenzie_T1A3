@@ -4,6 +4,5 @@ class Player
   def initialize(username)
     @username = username
     @lifelines = lifelines;
-    # Bank accountant = [];
   end
 end

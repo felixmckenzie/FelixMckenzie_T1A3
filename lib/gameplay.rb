@@ -1,9 +1,11 @@
 require 'tty-prompt'
+require 'colorize'
 
 class Gameplay
   def initialize(quiz, player)
     @quiz = quiz
     @player = player
+    @prompt = TTY::Prompt.new
   end
 
   def self.get_data
@@ -21,20 +23,18 @@ class Gameplay
   end
 
   def start_quiz(player)
-    prompt = TTY::Prompt.new
     quiz = Gameplay.get_data
     quiz.each do |question|
       begin
-        first_input = prompt.select(question.prompt, question.options)
-
+        first_input = @prompt.select(question.prompt, question.options)
         if first_input == question.lifeline && player.lifelines == 0
-          puts "No life lines left, please try again"
+          puts "Warning: No life lines left, please try again".colorize(:red)
           redo
         end
 
         if first_input == question.lifeline && player.lifelines > 0
           new_options = question.life_line_options(question.options, question.answer)
-          second_input = prompt.select(question.prompt, new_options)
+          second_input = @prompt.select(question.prompt, new_options)
           check_answer(second_input, question.answer, question.value)
           player.lifelines -= 1;
         else
@@ -46,7 +46,6 @@ class Gameplay
   end
 
   def check_answer(input, answer, value)
-    prompt = TTY::Prompt.new
     if input == answer
       puts "#{input} is correct, you've earnt #{value}"
     else
