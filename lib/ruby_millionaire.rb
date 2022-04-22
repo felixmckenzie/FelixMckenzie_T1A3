@@ -30,7 +30,7 @@ end
 options = ArgParser.parse(ARGV)
 
 if options[:help]
-  file = File.open("help.txt")
+  file = File.open("../help.txt")
   puts file.read
 
 elsif options[:quick]

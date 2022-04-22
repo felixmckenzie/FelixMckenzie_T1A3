@@ -1,1 +1,27 @@
-test
+Who Wants To Be A Ruby Millionaire is a terminal quiz application based on the Ruby programming language
+Test your Ruby knowledge by logging in and answering 12 multiple choice questions
+Throughout the quiz you may utilise two 50/50 lifelines that reduce the multiple choice options from four to two
+Each question has a dollar value, if you guess all questions correct you will take home a check for $1,000,000 
+You can view each questions value from the main menu 
+
+You may download the application from https://github.com/felixmckenzie/FelixMckenzie_T1A3
+
+For the app to run you will need the following requirements:
+Ruby installed on your local machine
+Ruby Gem dependencies installed 
+
+To ensure gem dependencies are installed and up to date
+Run bundle install from the main app directory containing the Gemfile 
+if you do not have bundler installed run gem install bundler 
+
+To execute the program navigate to the lib directory
+Run the command ruby ruby_millionaire.rb 
+
+Executing the program with a trailing command line argument:
+-h or -help will display this document 
+-q or -quick will skip the main menu and go straight to log in and play
+
+For best display results expand the command line to the full width of your monitor
+
+
+

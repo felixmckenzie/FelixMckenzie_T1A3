@@ -52,7 +52,7 @@ describe Gameplay do
     new_player = Player.new("Felix")
     game = Gameplay.new(new_quiz, new_player)
     quiz = Gameplay.get_data
-    expect(quiz[0].prompt).to eq("Who is the developer of Ruby?")
+    expect(quiz[0].prompt).to eq("Who Is The Developer Of Ruby?")
   end
 
   it 'quiz returns an array of options' do
@@ -68,6 +68,6 @@ describe Gameplay do
     new_player = Player.new("Felix")
     game = Gameplay.new(new_quiz, new_player)
     quiz = Gameplay.get_data
-    expect(quiz[2].answer).to eq("a) method")
+    expect(quiz[2].answer).to eq("method")
   end
 end
