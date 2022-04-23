@@ -5,6 +5,7 @@ require 'tty-prompt'
 require 'tty-table'
 require 'colorize'
 require 'artii'
+require 'terminal-table'
 
 class Menu
   def self.print_welcome_message
@@ -14,15 +15,10 @@ class Menu
   end
 
   def self.log_in
-    prompt = TTY::Prompt.new
-    puts "Please enter a user name between 3 and 10 characters long".colorize(:cyan)
-    puts "user name can contain upper or lowercase letters, numbers, underscores or dashes".colorize(:cyan)
-    username = prompt.ask("What would you like your user name to be?") do |q|
-      q.validate(/^[a-zA-Z0–9_-]{3,10}$/, "Invalid username: %{value}, please enter again".colorize(:red))
-    end
-    system("clear")
-    player = Player.new(username)
-    player.lifelines = 2
+    details = Menu.get_user_details
+    player = Player.new(details)
+    player.username = player.all_player_stats[:name]
+    player.lifelines = player.all_player_stats[:lifelines]
     puts "Ok #{player.username}, Let's play 'Who Wants To Be a Ruby Millionaire".colorize(:light_green)
     puts "You have #{player.lifelines} life lines to use".colorize(:cyan)
     new_quiz = ::Gameplay.new(Quiz.new, player)
@@ -47,6 +43,8 @@ class Menu
     end
 
     puts table.render(:ascii, alignment: [:center])
+    sleep 2
+
   end
 
   def self.display_menu
@@ -55,8 +53,9 @@ class Menu
     choices = [
       { name: "Log in and play", value: 1 },
       { name: "View prize money", value: 2 },
-      { name: "How to play", value: 3 },
-      { name: "Exit the app", value: 4 }
+      { name: "View Score Board", value: 3},
+      { name: "How to play", value: 4 },
+      { name: "Exit the app", value: 5 }
     ]
 
     Menu.print_welcome_message
@@ -71,9 +70,29 @@ class Menu
     when 2
       Menu.prize_money
     when 3
-      Menu.rules
+      Menu.display_scoreboard(player)
     when 4
+      Menu.rules
+    when 5
       exit
     end
   end
+
+def self.get_user_details
+  prompt = TTY::Prompt.new
+  details = prompt.collect do
+    key(:name).ask("What would you like your username to be?", required: true)
 end
+details[:score] = 0
+details[:prizemoney] = ""
+details[:lifelines] = 2
+details
+end
+
+end
+
+# prompt = TTY::Prompt.new
+#     self.username_condition
+#     username = prompt.ask("What would you like your user name to be?") do |q|
+#       q.validate(/^[a-zA-Z0–9_-]{3,10}$/, "Invalid username: %{value}, please enter again".colorize(:red))
+#     end
