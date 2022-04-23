@@ -27,39 +27,58 @@ class Gameplay
   def start_quiz(player)
     quiz = Gameplay.get_data
     quiz.each do |question|
-      begin
+        begin
         first_input = @prompt.select(question.prompt, question.options)
         if first_input == question.lifeline && player.lifelines == 0
-          puts "Warning: No life lines left, please try again".colorize(:red)
+          puts "Warning: No life lines left".colorize(:red)
+          if @prompt.yes?("Would you like to exit the quiz?")
+            exit 
+          else
           redo
         end
+      end
 
         if first_input == question.lifeline && player.lifelines > 0
-          new_options = question.life_line_options(question.options, question.answer)
-          second_input = @prompt.select(question.prompt, new_options)
-          check_answer(second_input, question.answer, question.value)
-          player.lifelines -= 1;
+          life_line_options = question.life_line_options(question.options, question.answer)
+          second_input = @prompt.select(question.prompt, life_line_options)
+          check_answer(second_input, question.answer, question.value, player)
+          player.update_life_lines(player)
         else
-          check_answer(first_input, question.answer, question.value)
-          announce_winner(player.username, question, quiz)
+          check_answer(first_input, question.answer, question.value, player)
+          player.update_prize_money(question.value, player)
+          announce_winner(player, question, quiz)
         end
       end
-    end
+    end 
   end
 
-  def check_answer(input, answer, value)
+  def check_answer(input, answer, value, player)
     if input == answer
-      puts "#{input} is correct, you've earnt #{value}"
+      puts "#{input} is correct, you've earnt #{value}".colorize(:light_green) 
+      player.update_prize_money(value, player) 
     else
-      puts "#{input} is incorrect"
-      puts "Thanks for playing"
-      exit
+      puts "#{input} is incorrect".colorize(:red)
+      puts "Thanks for playing".colorize(:light_green)
+      player.save_scoreboard(player)
+      sleep 1
+      Menu.display_menu
+    end
     end
   end
 
-  def announce_winner(username, question, quiz)
+  def announce_winner(player, question, quiz)
     if question == quiz.last
-      puts @winner_font.asciify("Congratulations #{username}, You are a Ruby Millionaire!").colorize(:light_green)
+      puts @winner_font.asciify("Congratulations #{player.username}, You are a Ruby Millionaire!").colorize(:light_green)
+      player.save_scoreboard(player)
+      player.display_scoreboard(player)
+      sleep 2
+      Menu.display_menu
     end
+
+
   end
-end
+
+
+
+
+
