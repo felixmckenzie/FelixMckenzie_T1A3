@@ -4,7 +4,11 @@ class Quiz
   attr_accessor :prompt, :options, :answer, :value, :lifeline
 
   def initialize()
-    @all_data = []
+    @prompt = prompt
+    @options = options
+    @answer = answer
+    @value = value
+    @lifeline = lifeline
   end
 
   def life_line_options(options, answer)
