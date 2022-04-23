@@ -35,6 +35,7 @@
        "prompt": "Ruby Is What Type Of Programming Language?",
        "options": [ "Strongly Typed / Statically Type", "Strongly Typed / Dynamically Typed", "Weakly Typed / Statically Typed", "Weakly Typed / Dynamically Typed", "Life Line"],
        "answer": "Strongly Typed / Dynamically Typed",
+       "lifeline": "Life Line",
        "value": "$10,000" 
     },
 
@@ -42,6 +43,7 @@
         "prompt": "What Is The Value Of The Variable Upcased In The Piece Of Code Below \n upcased = ['one', 'two', 'three'].map {|n| puts n.upcase}",
         "options": [ "upcased = ['ONE', 'TWO', 'THREE']", "upcased = ['One', 'Two', 'Three']", "upcased = [nil, nil, nil]", "upcased = ['one', 'two', 'three']", "Life Line"],
         "answer": "upcased = [nil, nil, nil]",
+        "lifeline": "Life Line",
         "value": "$20,000"
     },
 
@@ -49,6 +51,7 @@
         "prompt": "Identify The Objects In The Following Line Of Code random_stuff = [:tall, 'dude', 45.23]?",
         "options": [":tall", "dude", "45.23", "all of the above", "Life Line"],
         "answer": "all of the above",
+        "lifeline": "Life Line",
         "value": "$50,000"
     },
 
@@ -80,5 +83,7 @@
         "lifeline": "Life Line",
         "value": "$500,000"
     }
+
+    
 
 ]
