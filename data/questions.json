@@ -1,10 +1,11 @@
 [
     {
         "prompt": "Who Is The Developer Of Ruby?",
-       "options": [ "Yukihiro Matsumoto", "Bill Gates", "Brendan Eich", "Satoshi Nakamoto", "Life Line" ],
+       "options": [ "Yukihiro Matsumoto", "Bill Gates", "Brendan Eich", "Satoshi Nakamoto", "Life Line"],
        "answer": "Yukihiro Matsumoto",
        "lifeline": "Life Line",
-       "value": "$500"
+       "value": "$500",
+       "number": "1"
     },
 
     {
@@ -12,7 +13,8 @@
         "options": [ "compact", "flatten", "filter",  "map", "Life Line"],
         "answer": "compact",
         "lifeline": "Life Line",
-        "value": "$1,000"
+        "value": "$1,000",
+        "number": "2"
     },
 
     {
@@ -20,7 +22,8 @@
         "options": [ "method", "string", "array", "hash", "Life Line"],
         "answer": "method",
         "lifeline": "Life Line",
-        "value": "$2,000"
+        "value": "$2,000",
+        "number": "3"
     },
 
     {
@@ -28,7 +31,8 @@
         "options": [ "6", "2", "4", "8", "Life Line"],
         "answer": "4",
         "lifeline": "Life Line",
-        "value": "$5,000"
+        "value": "$5,000",
+        "number": "4"
     },
 
     {
@@ -36,7 +40,8 @@
        "options": [ "Strongly Typed / Statically Type", "Strongly Typed / Dynamically Typed", "Weakly Typed / Statically Typed", "Weakly Typed / Dynamically Typed", "Life Line"],
        "answer": "Strongly Typed / Dynamically Typed",
        "lifeline": "Life Line",
-       "value": "$10,000" 
+       "value": "$10,000",
+       "number": "5"
     },
 
     {
@@ -44,7 +49,8 @@
         "options": [ "upcased = ['ONE', 'TWO', 'THREE']", "upcased = ['One', 'Two', 'Three']", "upcased = [nil, nil, nil]", "upcased = ['one', 'two', 'three']", "Life Line"],
         "answer": "upcased = [nil, nil, nil]",
         "lifeline": "Life Line",
-        "value": "$20,000"
+        "value": "$20,000",
+        "number": "6"
     },
 
     {
@@ -52,7 +58,8 @@
         "options": [":tall", "dude", "45.23", "all of the above", "Life Line"],
         "answer": "all of the above",
         "lifeline": "Life Line",
-        "value": "$50,000"
+        "value": "$50,000",
+        "number": "7"
     },
 
     {
@@ -60,28 +67,40 @@
        "options": ["a = a,  b = a", "a = b, b = b", "a = a, b = b", "TypeError"],
        "answer": "a = b, b = b",
        "lifeline": "Life Line",
-       "value": "$75,000"
+       "value": "$75,000",
+       "number": "8"
     },
     {
         "prompt": "Which of the following is supported by Ruby?",
         "options": ["Dynamic Type System", "Multiple Programming Paradigms", "Autmatic Memory Management", "All Of The Above", "Life Line"],
         "answer": "All Of The Above",
         "lifeline": "Life Line",
-        "value": "$150,000"
+        "value": "$150,000",
+        "number": "9"
     },
     {
         "prompt": "Variables That Start With A Dollar Sign Are What Kind Of Variables In Ruby?",
         "options": ["Local variable", "Global variable", "Instance variable", "Class variable", "Life Line"],
         "answer": "Global variable",
         "lifeline": "Life Line",
-        "value": "$250,000"
+        "value": "$250,000",
+        "number": "10"
     },
     {
         "prompt": "What Does %x!ls! Represent?",
         "options": ["Same as back tick command output `ls`", "Same as 'x'", "Same as 'xls'", "None of the above", "Life Line"],
         "answer": "Same as back tick command output `ls`",
         "lifeline": "Life Line",
-        "value": "$500,000"
+        "value": "$500,000",
+        "number": "11"
+    },
+    {
+        "prompt": "What Is the SuperClass of BasicObject's Singleton Class?",
+        "options": ["nil", "class", "module", "kernel", "Life Line"],
+        "answer": "class",
+        "lifeline": "Life Line",
+        "value": "$1,000,000",
+        "number": "12"
     }
 
     
